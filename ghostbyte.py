@@ -34,6 +34,14 @@ class MatrixCRTApp:
         self.root.title("Ghostbyte")
         self.root.configure(bg="#0c0c0c")
 
+        try:
+            icon_img = Image.open("img/ghostbyte.png")
+            icon_img = icon_img.resize((64, 64), Image.Resampling.LANCZOS)
+            self.icon_image = ImageTk.PhotoImage(icon_img)
+            self.root.iconphoto(True, self.icon_image)
+        except Exception:
+            pass
+
         self.data = self.load_progress()
         self.current_category = None
         self.current_services = []
@@ -283,7 +291,7 @@ class MatrixCRTApp:
     def show_intro(self):
         self.append_output("\n\nWake up, Neo...\n")
         self.root.after(800, lambda: self.append_output("The data brokers have you...\n"))
-        self.root.after(1600, lambda: self.append_output("Follow the GhostByte.\n"))
+        self.root.after(1600, lambda: self.append_output("Follow the white rabbit.\n"))
         self.root.after(2400, lambda: self.append_output("Knock, knock, Neo.\n\n"))
         self.root.after(3200, lambda: self.append_output("[ Ghostbyte - System Boot Complete ]\n\n"))
         self.root.after(4000, self.finish_intro)
