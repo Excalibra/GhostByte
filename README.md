@@ -15,6 +15,9 @@ Ghostbyte loads the full **184-source** personal data removal list from Michael 
 No fake “privacy services.” Just you, the terminal, and 184 data brokers about to have a very bad day.
 
 ---
+
+<img width="953" height="905" alt="image" src="https://github.com/user-attachments/assets/8b5f613d-bd57-4bfa-904d-ee3942f2b147" />
+
 </div>
 
 ### Features
