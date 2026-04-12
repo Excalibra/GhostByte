@@ -62,6 +62,3 @@ Start with **CORE DATA BROKERS (MOST BANG)**.
 Once those are dead, hit the big 184-source list and watch the internet slowly forget you ever existed.
 
 ---
-
-Star it if you actually disappeared.  
-Or don’t. I don’t give a fuck. I’m already gone.
