@@ -18,10 +18,6 @@ No fake “privacy services.” Just you, the terminal, and 184 data brokers abo
 
 ## Screenshots
 
-<img width="953" height="905" alt="image" src="https://github.com/user-attachments/assets/8b5f613d-bd57-4bfa-904d-ee3942f2b147" />
-
-<br><br/>
-
 <img width="1630" height="907" alt="image" src="https://github.com/user-attachments/assets/47bf06ea-1be9-4f1c-8e40-699694f3f601" />
 
 <img width="1449" height="905" alt="image" src="https://github.com/user-attachments/assets/0d3ca8d1-6488-4ef9-9855-4689b8f0aaca" />
