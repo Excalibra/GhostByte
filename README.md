@@ -1,4 +1,8 @@
+<div align="center">
+  
 # Ghostbyte
+
+  <img width="400" alt="ghostbyte" src="https://github.com/user-attachments/assets/a3e09134-17f6-464a-a8d3-b37567345423" />
 
 **Personal Data Removal Tool**  
 
@@ -11,6 +15,7 @@ Ghostbyte loads the full **184-source** personal data removal list from Michael 
 No fake “privacy services.” Just you, the terminal, and 184 data brokers about to have a very bad day.
 
 ---
+</div>
 
 ### Features
 
