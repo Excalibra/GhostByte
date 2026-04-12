@@ -20,6 +20,18 @@ No fake “privacy services.” Just you, the terminal, and 184 data brokers abo
 
 </div>
 
+## Philosophy & Design
+
+Many commercial privacy tools promise to automate the opt‑out process, but they require you to hand over your full name, address, phone number, and email—often storing this sensitive data on third‑party servers. Ghostbyte takes a fundamentally different approach:
+
+- **No personal data is ever stored in plaintext or transmitted.** The `YOUR_DATA` dictionary in the source code is a placeholder; you are encouraged to keep your actual details in your head or a separate, encrypted location.
+- **Progress is tracked locally** in `data/privacy_progress.json`, but only Boolean flags (`submitted`/`verified`) are saved—never your identity.
+- **The process remains semi-manual by design.** GhostByte opens a window to your browser for you to the opt‑out page, and mark your progress. This ensures you retain full oversight and never surrender your information to an intermediary.
+
+This hybrid model—guided, systematic, but ultimately human‑controlled—represents a pragmatic balance between convenience and uncompromising privacy.
+
+> **Beta Notice:** Ghostbyte is currently in beta. The interface and feature set are stable, but future updates may include additional categories, improved window scaling, and optional automation for *non‑sensitive* steps (e.g., opening URLs in bulk). Feedback and contributions are welcome.
+
 ### Features
 
 - Complete 184-source database from the official workbook
