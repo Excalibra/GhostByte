@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+
+# User data
+data/privacy_progress.json
+
+# OS
+.DS_Store
+Thumbs.db
