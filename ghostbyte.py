@@ -291,7 +291,7 @@ class MatrixCRTApp:
     def show_intro(self):
         self.append_output("\n\nWake up, Neo...\n")
         self.root.after(800, lambda: self.append_output("The data brokers have you...\n"))
-        self.root.after(1600, lambda: self.append_output("Follow the white rabbit.\n"))
+        self.root.after(1600, lambda: self.append_output("Follow the green ghost.\n"))
         self.root.after(2400, lambda: self.append_output("Knock, knock, Neo.\n\n"))
         self.root.after(3200, lambda: self.append_output("[ Ghostbyte - System Boot Complete ]\n\n"))
         self.root.after(4000, self.finish_intro)
