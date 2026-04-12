@@ -2,7 +2,6 @@
 """
 Ghostbyte
 Personal Data Removal Tool
-Matrix GUI - Green Phosphor CRT Emulation
 """
 
 import json
@@ -282,7 +281,7 @@ class MatrixCRTApp:
 
     # ---------- VIEWS ----------
     def show_intro(self):
-        self.append_output("\n\nWake up, Neo...\n")
+        self.append_output("\n\nWake up, ...\n")
         self.root.after(800, lambda: self.append_output("The Matrix has you...\n"))
         self.root.after(1600, lambda: self.append_output("Follow the white rabbit.\n"))
         self.root.after(2400, lambda: self.append_output("Knock, knock, Neo.\n\n"))
