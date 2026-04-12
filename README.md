@@ -12,7 +12,8 @@ Good. Time to disappear.
 
 Ghostbyte loads the full **184-source** personal data removal list from Michael Bazzell’s *Extreme Privacy* workbook and gives you a clean, retro hacker interface to track every purge like a professional.
 
-No fake “privacy services.” Just you, the terminal, and 184 data brokers about to have a very bad day.
+No fake “privacy services.”
+Just you, the terminal, and 184 data brokers about to have a very bad day.
 
 ---
 </div>
