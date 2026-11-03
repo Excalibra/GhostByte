@@ -65,6 +65,9 @@ class MatrixCRTApp:
         self.create_main_frame()
         self.create_status_bar()
         self.create_button_bar()
+        # Pack the expanding main area last so bottom bars keep their space
+        # when the window is resized smaller.
+        self.main_frame.pack(fill="both", expand=True, padx=20, pady=10)
 
         self.root.bind("<Up>", self.on_arrow_up)
         self.root.bind("<Down>", self.on_arrow_down)
@@ -151,7 +154,6 @@ class MatrixCRTApp:
 
     def create_main_frame(self):
         self.main_frame = tk.Frame(self.root, bg="#0c0c0c")
-        self.main_frame.pack(fill="both", expand=True, padx=20, pady=10)
 
         self.output_text = tk.Text(self.main_frame, wrap="none", bg="#0c0c0c", fg="#7fff7f",
                                    insertbackground="#7fff7f", font=self.custom_font,
