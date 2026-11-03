@@ -73,6 +73,7 @@ ghostbyte/
 
 - `1-9` → select category  
 - number → toggle **SUBMITTED**  
+- click a row → same as typing its number  
 - `v <number>` → toggle **VERIFIED**  
 - `o <number>` → open the removal URL  
 - `m` → menu  
