@@ -54,6 +54,7 @@ class MatrixCRTApp:
         self.current_category = None
         self.current_services = []
         self.current_view = "categories"
+        self.selected_service_idx = None
         self.intro_shown = False
 
         self.custom_font = tkfont.Font(family="Courier", size=10)
@@ -62,7 +63,7 @@ class MatrixCRTApp:
         self.create_header()
         self.create_main_frame()
         self.create_status_bar()
-        self.create_input_area()
+        self.create_button_bar()
 
         self.apply_scanlines()
         self.root.update_idletasks()
@@ -72,6 +73,7 @@ class MatrixCRTApp:
 
         self.clear_output()
         self.show_intro()
+        self.update_buttons()
 
     def adjust_window_size(self):
         """Set window width to fit the table, capped to a compact size."""
@@ -187,31 +189,44 @@ class MatrixCRTApp:
         pct = int(completed / total * 100) if total else 0
         self.status_var.set(f" TRACE PROGRAM: ACTIVE | SIGNAL: {pct}% | PURGED: {completed}/{total}")
 
-    def create_input_area(self):
-        input_frame = tk.Frame(self.root, bg="#0c0c0c", height=30)
-        input_frame.pack(fill="x", side="bottom", padx=20, pady=(0,10))
-        input_frame.pack_propagate(False)
+    def create_button_bar(self):
+        self.button_frame = tk.Frame(self.root, bg="#0c0c0c", height=34)
+        self.button_frame.pack(fill="x", side="bottom", padx=20, pady=(0, 10))
+        self.button_frame.pack_propagate(False)
 
-        self.prompt_label = tk.Label(input_frame, text=">", font=self.bold_font,
-                                     fg="#7fff7f", bg="#0c0c0c")
-        self.prompt_label.pack(side="left")
+    def make_button(self, text, command):
+        btn = tk.Button(self.button_frame, text=f"[ {text} ]", font=self.bold_font,
+                        bg="#0c0c0c", fg="#7fff7f", activebackground="#7fff7f",
+                        activeforeground="#0c0c0c", relief="flat", bd=0,
+                        highlightthickness=1, highlightbackground="#4a9a4a",
+                        highlightcolor="#7fff7f", padx=10, pady=2,
+                        cursor="hand2", takefocus=0, command=command)
+        btn.bind("<Enter>", lambda e: btn.config(bg="#7fff7f", fg="#0c0c0c"))
+        btn.bind("<Leave>", lambda e: btn.config(bg="#0c0c0c", fg="#7fff7f"))
+        return btn
 
-        self.input_entry = tk.Entry(input_frame, font=self.custom_font,
-                                    bg="#0c0c0c", fg="#7fff7f", insertbackground="#7fff7f",
-                                    relief="flat", borderwidth=1, highlightcolor="#7fff7f",
-                                    highlightbackground="#4a9a4a", highlightthickness=1)
-        self.input_entry.pack(side="left", fill="x", expand=True, padx=(5,0))
-        self.input_entry.bind("<Return>", self.process_command)
-        self.input_entry.focus_set()
-        self.root.bind("<FocusIn>", lambda e: self.input_entry.focus_set())
+    def update_buttons(self):
+        for widget in self.button_frame.winfo_children():
+            widget.destroy()
 
-        self.blink_cursor()
+        if self.current_view == "categories":
+            buttons = [("ALL REMAINING", self.show_all_services),
+                       ("QUIT", self.quit_app)]
+        elif self.current_view == "services":
+            buttons = [("BACK", self.show_categories),
+                       ("OPEN LINK", self.open_selected_url),
+                       ("VERIFY", self.verify_selected),
+                       ("QUIT", self.quit_app)]
+        else:
+            buttons = [("MENU", self.show_categories),
+                       ("QUIT", self.quit_app)]
 
-    def blink_cursor(self):
-        current = self.input_entry.cget("insertbackground")
-        new_color = "#0c0c0c" if current == "#7fff7f" else "#7fff7f"
-        self.input_entry.config(insertbackground=new_color)
-        self.root.after(500, self.blink_cursor)
+        for text, command in buttons:
+            self.make_button(text, command).pack(side="left", padx=6)
+
+    def quit_app(self):
+        self.save_progress()
+        self.root.quit()
 
     def apply_scanlines(self):
         self.scanline_canvas = tk.Canvas(self.root, highlightthickness=0, bg="#0c0c0c")
@@ -246,7 +261,6 @@ class MatrixCRTApp:
         self.output_text.config(state="disabled")
 
     def on_output_click(self, event):
-        self.input_entry.focus_set()
         index = self.output_text.index(f"@{event.x},{event.y}")
         line = self.output_text.get(f"{index} linestart", f"{index} lineend")
         match = re.match(r"\s*│\s*(\d+)\s*│", line)
@@ -257,54 +271,9 @@ class MatrixCRTApp:
                 self.select_category(num - 1)
             elif self.current_view == "services":
                 self.append_output(f"> {num}\n")
+                self.selected_service_idx = num - 1
                 self.toggle_submitted(num - 1)
         return "break"
-
-    def process_command(self, event=None):
-        cmd = self.input_entry.get().strip()
-        self.input_entry.delete(0, "end")
-        self.append_output(f"> {cmd}\n")
-        self.handle_command(cmd)
-
-    def handle_command(self, cmd):
-        parts = cmd.split()
-        if not parts:
-            return
-
-        if cmd.lower() in ("q", "quit", "exit"):
-            self.save_progress()
-            self.root.quit()
-        elif cmd.lower() in ("m", "menu"):
-            self.show_categories()
-        elif cmd.lower() in ("a", "all"):
-            self.show_all_services()
-        elif cmd == "b":
-            if self.current_view == "services":
-                self.show_categories()
-            else:
-                self.append_output("[!] 'b' only goes back from service view. Use 'm' for main menu.\n")
-        elif parts[0] == "o" and len(parts) > 1:
-            try:
-                num = int(parts[1])
-                self.open_url(num - 1)
-            except ValueError:
-                self.append_output("[!] Usage: o <number>\n")
-        elif parts[0] == "v" and len(parts) > 1:
-            try:
-                num = int(parts[1])
-                self.toggle_verified(num - 1)
-            except ValueError:
-                self.append_output("[!] Usage: v <number>\n")
-        elif cmd.isdigit():
-            num = int(cmd)
-            if self.current_view == "categories":
-                self.select_category(num - 1)
-            elif self.current_view == "services":
-                self.toggle_submitted(num - 1)
-            else:
-                self.append_output("[!] Numbers work only in category or service lists.\n")
-        else:
-            self.append_output("[!] Commands: m=Menu, a=All, q=Quit, b=Back (services), o <number>, v <number>, or enter a number.\n")
 
     # ---------- VIEWS ----------
     def show_intro(self):
@@ -340,9 +309,9 @@ class MatrixCRTApp:
             self.append_output(row + "\n")
 
         self.append_output("└" + "─" * INNER_WIDTH + "┘\n")
-        self.append_output("\nEnter a number (or click a row) to select a category.\n")
-        self.append_output("Commands: m=Menu, a=All, q=Quit\n")
+        self.append_output("\nClick a row to select a category.\n")
         self.current_view = "categories"
+        self.update_buttons()
 
     def show_categories(self):
         self.clear_output()
@@ -353,6 +322,7 @@ class MatrixCRTApp:
             self.current_category = list(self.data.keys())[idx]
             self.current_services = self.data[self.current_category]
             self.current_view = "services"
+            self.selected_service_idx = None
             self.show_services(self.current_category, self.current_services)
         else:
             self.append_output("[!] Invalid category index.\n")
@@ -400,11 +370,10 @@ class MatrixCRTApp:
 
         self.output_text.config(state="disabled")
         self.append_output(f"└{'─' * INNER_WIDTH}┘\n")
-        self.append_output("\nEnter a number (or click a row) to toggle SUBMITTED.\n")
-        self.append_output("Type 'v <number>' to toggle VERIFIED.\n")
-        self.append_output("Type 'o <number>' to open the URL.\n")
-        self.append_output("Commands: b=Back, q=Quit\n")
+        self.append_output("\nClick a row to toggle SUBMITTED.\n")
+        self.append_output("Use the buttons below to OPEN LINK or VERIFY the last clicked row.\n")
         self.current_view = "services"
+        self.update_buttons()
 
     def toggle_submitted(self, idx):
         if self.current_view == "services" and 0 <= idx < len(self.current_services):
@@ -428,6 +397,18 @@ class MatrixCRTApp:
         else:
             self.append_output("[!] Invalid service number or not in service view.\n")
 
+    def open_selected_url(self):
+        if self.current_view == "services" and self.selected_service_idx is not None:
+            self.open_url(self.selected_service_idx)
+        else:
+            self.append_output("[!] Click a service row first.\n")
+
+    def verify_selected(self):
+        if self.current_view == "services" and self.selected_service_idx is not None:
+            self.toggle_verified(self.selected_service_idx)
+        else:
+            self.append_output("[!] Click a service row first.\n")
+
     def open_url(self, idx):
         if self.current_view == "services" and 0 <= idx < len(self.current_services):
             svc = self.current_services[idx]
@@ -448,8 +429,8 @@ class MatrixCRTApp:
             for svc in services:
                 if not svc["submitted"]:
                     self.append_output(f"* {svc['name']} ({cat_name})\n")
-        self.append_output("\nCommands: m=Menu, q=Quit\n")
         self.current_view = "all"
+        self.update_buttons()
 
 def main():
     root = tk.Tk()
