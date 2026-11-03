@@ -1,9 +1,9 @@
 {
   "CORE DATA BROKERS (MOST BANG)": [
     {"name": "Spokeo", "url": "https://www.spokeo.com/optout", "notes": "Online + email verify", "dedicated_removal": true, "submitted": false, "verified": false},
-    {"name": "Radaris", "url": "https://radaris.com/control/privacy", "notes": "Select profile", "dedicated_removal": true, "submitted": false, "verified": false},
+    {"name": "Radaris", "url": "https://radaris.com/", "notes": "Footer 'Do Not Sell My Info' + email verify", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "Whitepages / 411", "url": "https://www.whitepages.com/suppression-requests", "notes": "PIN call", "dedicated_removal": true, "submitted": false, "verified": false},
-    {"name": "Intelius", "url": "https://www.intelius.com/opt-out", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
+    {"name": "Intelius", "url": "https://suppression.peopleconnect.us/login", "notes": "PeopleConnect + email verify", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "Been Verified", "url": "https://www.beenverified.com/faq/opt-out/", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "Acxiom", "url": "https://isapps.acxiom.com/optout/optout.aspx", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "Infotracer", "url": "https://infotracer.com/optout", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
@@ -46,12 +46,12 @@
     {"name": "National Cellular Directory", "url": "https://www.nationalcellulardirectory.com/optout/", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "OK Caller", "url": "https://www.okcaller.com/", "notes": "Opt-out or Unlist in results", "dedicated_removal": false, "submitted": false, "verified": false},
     {"name": "US Phonebook", "url": "https://www.usphonebook.com/opt-out", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
-    {"name": "Reverse Phone Lookup", "url": "https://www.intelius.com/opt-out", "notes": "Intelius tool", "dedicated_removal": true, "submitted": false, "verified": false},
+    {"name": "Reverse Phone Lookup", "url": "https://suppression.peopleconnect.us/login", "notes": "PeopleConnect tool", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "Number Guru", "url": "https://www.beenverified.com/app/optout/search", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "Cell Revealer", "url": "https://cellrevealer.com", "notes": "Click link right of entry", "dedicated_removal": false, "submitted": false, "verified": false}
   ],
   "ADDRESS & LOCATION": [
-    {"name": "Addresses.com", "url": "https://www.intelius.com/opt-out/submit/", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
+    {"name": "Addresses.com", "url": "https://suppression.peopleconnect.us/login", "notes": "PeopleConnect + email verify", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "Address Search", "url": "https://addresssearch.com/remove-info.php", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},
     {"name": "Property Shark", "url": "https://www.propertyshark.com/", "notes": "Email support@propertyshark.com", "dedicated_removal": false, "submitted": false, "verified": false},
     {"name": "Neighbor Report", "url": "https://neighbor.report/remove", "notes": "Online tool", "dedicated_removal": true, "submitted": false, "verified": false},

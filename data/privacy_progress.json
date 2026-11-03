@@ -10,8 +10,8 @@
     },
     {
       "name": "Radaris",
-      "url": "https://radaris.com/control/privacy",
-      "notes": "Select profile",
+      "url": "https://radaris.com/",
+      "notes": "Footer 'Do Not Sell My Info' + email verify",
       "dedicated_removal": true,
       "submitted": false,
       "verified": false
@@ -26,8 +26,8 @@
     },
     {
       "name": "Intelius",
-      "url": "https://www.intelius.com/opt-out",
-      "notes": "Online tool",
+      "url": "https://suppression.peopleconnect.us/login",
+      "notes": "PeopleConnect + email verify",
       "dedicated_removal": true,
       "submitted": false,
       "verified": false
@@ -328,8 +328,8 @@
     },
     {
       "name": "Reverse Phone Lookup",
-      "url": "https://www.intelius.com/opt-out",
-      "notes": "Intelius tool",
+      "url": "https://suppression.peopleconnect.us/login",
+      "notes": "PeopleConnect tool",
       "dedicated_removal": true,
       "submitted": false,
       "verified": false
@@ -354,8 +354,8 @@
   "ADDRESS & LOCATION": [
     {
       "name": "Addresses.com",
-      "url": "https://www.intelius.com/opt-out/submit/",
-      "notes": "Online tool",
+      "url": "https://suppression.peopleconnect.us/login",
+      "notes": "PeopleConnect + email verify",
       "dedicated_removal": true,
       "submitted": false,
       "verified": false
