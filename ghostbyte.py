@@ -54,7 +54,8 @@ class MatrixCRTApp:
         self.current_category = None
         self.current_services = []
         self.current_view = "categories"
-        self.selected_service_idx = None
+        self.selected_idx = None
+        self.table_first_line = None
         self.intro_shown = False
 
         self.custom_font = tkfont.Font(family="Courier", size=10)
@@ -64,6 +65,10 @@ class MatrixCRTApp:
         self.create_main_frame()
         self.create_status_bar()
         self.create_button_bar()
+
+        self.root.bind("<Up>", self.on_arrow_up)
+        self.root.bind("<Down>", self.on_arrow_down)
+        self.root.bind("<Return>", self.on_enter)
 
         self.apply_scanlines()
         self.root.update_idletasks()
@@ -157,6 +162,8 @@ class MatrixCRTApp:
 
         self.output_text.tag_configure("bright", foreground="#7fff7f")
         self.output_text.tag_configure("dim", foreground="#555555")
+        self.output_text.tag_configure("sel", background="#7fff7f", foreground="#0c0c0c")
+        self.output_text.tag_configure("guide", foreground="#b8ffb8")
 
         v_scrollbar = tk.Scrollbar(self.main_frame, command=self.output_text.yview, bg="#0c0c0c",
                                    troughcolor="#0c0c0c", activebackground="#7fff7f")
@@ -215,6 +222,7 @@ class MatrixCRTApp:
         elif self.current_view == "services":
             buttons = [("BACK", self.show_categories),
                        ("OPEN LINK", self.open_selected_url),
+                       ("SUBMIT", self.submit_selected),
                        ("VERIFY", self.verify_selected),
                        ("QUIT", self.quit_app)]
         else:
@@ -267,12 +275,56 @@ class MatrixCRTApp:
         if match:
             num = int(match.group(1))
             if self.current_view == "categories":
-                self.append_output(f"> {num}\n")
+                self.selected_idx = num - 1
+                self.highlight_selection()
                 self.select_category(num - 1)
             elif self.current_view == "services":
-                self.append_output(f"> {num}\n")
-                self.selected_service_idx = num - 1
-                self.toggle_submitted(num - 1)
+                self.selected_idx = num - 1
+                self.highlight_selection()
+        return "break"
+
+    # ---------- SELECTION ----------
+    def current_row_count(self):
+        if self.current_view == "categories":
+            return len(self.data)
+        if self.current_view == "services":
+            return len(self.current_services)
+        return 0
+
+    def highlight_selection(self):
+        self.output_text.tag_remove("sel", "1.0", "end")
+        if self.selected_idx is None or self.table_first_line is None:
+            return
+        line = self.table_first_line + self.selected_idx
+        self.output_text.tag_add("sel", f"{line}.0", f"{line}.end")
+        self.output_text.tag_raise("sel")
+        self.output_text.see(f"{line}.0")
+
+    def move_selection(self, delta):
+        count = self.current_row_count()
+        if count == 0:
+            return
+        if self.selected_idx is None:
+            self.selected_idx = 0
+        else:
+            self.selected_idx = max(0, min(count - 1, self.selected_idx + delta))
+        self.highlight_selection()
+
+    def on_arrow_up(self, event=None):
+        self.move_selection(-1)
+        return "break"
+
+    def on_arrow_down(self, event=None):
+        self.move_selection(1)
+        return "break"
+
+    def on_enter(self, event=None):
+        if self.selected_idx is None:
+            return "break"
+        if self.current_view == "categories":
+            self.select_category(self.selected_idx)
+        elif self.current_view == "services":
+            self.open_url(self.selected_idx)
         return "break"
 
     # ---------- VIEWS ----------
@@ -301,6 +353,7 @@ class MatrixCRTApp:
         self.append_output(dummy_header + "\n")
         self.append_output("├" + "─" * INNER_WIDTH + "┤\n")
 
+        self.table_first_line = int(self.output_text.index("end-1c").split(".")[0])
         for i, (cat_name, services) in enumerate(self.data.items(), 1):
             remaining = sum(1 for s in services if not s["submitted"])
             display_name = (cat_name[:CAT_W-2] + "..") if len(cat_name) > CAT_W else cat_name.ljust(CAT_W)
@@ -309,8 +362,10 @@ class MatrixCRTApp:
             self.append_output(row + "\n")
 
         self.append_output("└" + "─" * INNER_WIDTH + "┘\n")
-        self.append_output("\nClick a row to select a category.\n")
+        self.append_output("\nUse UP/DOWN + ENTER, or click a row, to select a category.\n")
         self.current_view = "categories"
+        self.selected_idx = 0 if self.data else None
+        self.highlight_selection()
         self.update_buttons()
 
     def show_categories(self):
@@ -322,7 +377,7 @@ class MatrixCRTApp:
             self.current_category = list(self.data.keys())[idx]
             self.current_services = self.data[self.current_category]
             self.current_view = "services"
-            self.selected_service_idx = None
+            self.selected_idx = 0
             self.show_services(self.current_category, self.current_services)
         else:
             self.append_output("[!] Invalid category index.\n")
@@ -341,6 +396,7 @@ class MatrixCRTApp:
         self.append_output(f"├{'─' * INNER_WIDTH}┤\n")
 
         self.output_text.config(state="normal")
+        self.table_first_line = int(self.output_text.index("end-1c").split(".")[0])
         for i, svc in enumerate(services, 1):
             name_raw = svc['name']
             name = (name_raw[:NAME_W-2] + "..") if len(name_raw) > NAME_W else name_raw.ljust(NAME_W)
@@ -370,9 +426,16 @@ class MatrixCRTApp:
 
         self.output_text.config(state="disabled")
         self.append_output(f"└{'─' * INNER_WIDTH}┘\n")
-        self.append_output("\nClick a row to toggle SUBMITTED.\n")
-        self.append_output("Use the buttons below to OPEN LINK or VERIFY the last clicked row.\n")
+        self.append_output("\nUse UP/DOWN to select a row, ENTER to open its link.\n")
+        self.append_output("Use the buttons below to OPEN LINK, SUBMIT, or VERIFY the selected row.\n")
         self.current_view = "services"
+        if services:
+            if self.selected_idx is None:
+                self.selected_idx = 0
+            self.selected_idx = min(self.selected_idx, len(services) - 1)
+        else:
+            self.selected_idx = None
+        self.highlight_selection()
         self.update_buttons()
 
     def toggle_submitted(self, idx):
@@ -398,16 +461,50 @@ class MatrixCRTApp:
             self.append_output("[!] Invalid service number or not in service view.\n")
 
     def open_selected_url(self):
-        if self.current_view == "services" and self.selected_service_idx is not None:
-            self.open_url(self.selected_service_idx)
+        if self.current_view == "services" and self.selected_idx is not None:
+            self.open_url(self.selected_idx)
         else:
-            self.append_output("[!] Click a service row first.\n")
+            self.append_output("[!] Select a service row first.\n")
+
+    def submit_selected(self):
+        if self.current_view == "services" and self.selected_idx is not None:
+            self.toggle_submitted(self.selected_idx)
+        else:
+            self.append_output("[!] Select a service row first.\n")
 
     def verify_selected(self):
-        if self.current_view == "services" and self.selected_service_idx is not None:
-            self.toggle_verified(self.selected_service_idx)
+        if self.current_view == "services" and self.selected_idx is not None:
+            self.toggle_verified(self.selected_idx)
         else:
-            self.append_output("[!] Click a service row first.\n")
+            self.append_output("[!] Select a service row first.\n")
+
+    def removal_guide(self, svc):
+        """Build short, service-specific opt-out instructions from its metadata."""
+        notes = svc.get("notes", "")
+        notes_l = notes.lower()
+        email = YOUR_DATA["email"]
+        steps = []
+
+        if not svc.get("dedicated_removal", True):
+            email_match = re.search(r"[\w.+-]+@[\w-]+\.[a-z]{2,}", notes)
+            if email_match:
+                steps.append(f"Send a removal request from {email} to {email_match.group(0)}")
+            else:
+                steps.append("Use the site's contact/feedback channel to request removal")
+            steps.append("Include your full name, current + past addresses, phone, and record URL")
+            steps.append("Ask for written confirmation once the record is deleted")
+        else:
+            steps.append("Search the site for your full name + city/state and open YOUR listing")
+            steps.append("Copy the exact listing URL, then paste it into the opt-out form")
+            steps.append(f"Fill in: full name, address, phone, and email {email}")
+            if "email" in notes_l:
+                steps.append("Watch your inbox (and spam) and click the confirmation link")
+            if "select profile" in notes_l:
+                steps.append("Double-check you selected YOUR exact profile before submitting")
+
+        lines = ["  GUIDE — how to disappear from this site:"]
+        lines += [f"   {i}. {s}" for i, s in enumerate(steps, 1)]
+        return lines
 
     def open_url(self, idx):
         if self.current_view == "services" and 0 <= idx < len(self.current_services):
@@ -415,6 +512,7 @@ class MatrixCRTApp:
             if svc.get("url"):
                 webbrowser.open(svc["url"])
                 self.append_output(f"[ Opened {svc['url']} ]\n")
+                self.append_output("\n".join(self.removal_guide(svc)) + "\n", "guide")
             else:
                 self.append_output("[!] No URL for this service.\n")
         else:
@@ -430,6 +528,8 @@ class MatrixCRTApp:
                 if not svc["submitted"]:
                     self.append_output(f"* {svc['name']} ({cat_name})\n")
         self.current_view = "all"
+        self.selected_idx = None
+        self.table_first_line = None
         self.update_buttons()
 
 def main():

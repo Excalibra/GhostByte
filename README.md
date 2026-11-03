@@ -42,7 +42,8 @@ This hybrid model—guided, systematic, but ultimately human‑controlled—repr
 - Beautiful green-on-black CRT interface with real scanlines
 - Live progress tracking (submitted / verified / % purged)
 - Non-removal URLs automatically dimmed grey so you know when you’re dealing with email-only bullshit
-- One-click buttons: toggle, open link, verify — no typing commands
+- Per-site opt-out guides shown every time you open a removal link
+- Keyboard-driven: arrow keys + enter, with buttons for submit/verify — no typing commands
 - Auto-saves your progress forever
 - Loads fresh sources from `data/sources.json` on every run
 
@@ -71,9 +72,12 @@ ghostbyte/
 
 ### Controls (inside the GUI)
 
-- click a row → select category / toggle **SUBMITTED**  
-- `OPEN LINK` button → open the removal URL of the last clicked row  
-- `VERIFY` button → toggle **VERIFIED** on the last clicked row  
+- `↑` / `↓` → move the highlighted row (or click a row to highlight it)  
+- `ENTER` → open the highlighted category, or the highlighted service's removal URL  
+- opening a URL prints a short per-site **GUIDE** below it: what to search for, what info to enter, and when to expect a confirmation email  
+- `OPEN LINK` button → open the removal URL of the highlighted row  
+- `SUBMIT` button → toggle **SUBMITTED** on the highlighted row  
+- `VERIFY` button → toggle **VERIFIED** on the highlighted row  
 - `BACK` button → back to the menu  
 - `ALL REMAINING` button → show ALL remaining services  
 - `MENU` button → back to the category menu  
