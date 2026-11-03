@@ -1,0 +1,1448 @@
+{
+  "CORE DATA BROKERS (MOST BANG)": [
+    {
+      "name": "Spokeo",
+      "url": "https://www.spokeo.com/optout",
+      "notes": "Online + email verify",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Radaris",
+      "url": "https://radaris.com/control/privacy",
+      "notes": "Select profile",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Whitepages / 411",
+      "url": "https://www.whitepages.com/suppression-requests",
+      "notes": "PIN call",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Intelius",
+      "url": "https://www.intelius.com/opt-out",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Been Verified",
+      "url": "https://www.beenverified.com/faq/opt-out/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Acxiom",
+      "url": "https://isapps.acxiom.com/optout/optout.aspx",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Infotracer",
+      "url": "https://infotracer.com/optout",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "LexisNexis",
+      "url": "https://optout.lexisnexis.com",
+      "notes": "Online + docs",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "TruePeopleSearch",
+      "url": "https://www.truepeoplesearch.com/removal",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "PEOPLE SEARCH ENGINES": [
+    {
+      "name": "Fast People Search",
+      "url": "https://www.fastpeoplesearch.com/removal",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Finder",
+      "url": "https://peoplefinder.com/optout.php",
+      "notes": "Online + email verify",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "CocoFinder",
+      "url": "https://cocofinder.com/remove-my-info",
+      "notes": "Online form",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Nuwber",
+      "url": "https://www.nuwber.com/removal/link",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "PeekYou",
+      "url": "https://www.peekyou.com/about/contact/optout/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "That's Them",
+      "url": "https://thatsthem.com/optout",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "ID Crawl",
+      "url": "https://www.idcrawl.com/opt-out",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Clustr Maps",
+      "url": "https://clustrmaps.com/bl/opt-out",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Search People Free",
+      "url": "https://www.searchpeoplefree.com/opt-out",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Free People Directory",
+      "url": "https://www.freepeopledirectory.com/optout",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "USA People Search",
+      "url": "https://www.usa-people-search.com/manage/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Whiz",
+      "url": "https://www.peoplewhiz.com/remove-my-info",
+      "notes": "Online + email confirm",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Search Now",
+      "url": "https://peoplesearchnow.com/opt-out",
+      "notes": "Postal mail",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Searcher",
+      "url": "https://www.peoplesearcher.com/optOut/name/landing",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Reveal Name",
+      "url": "https://www.revealname.com/opt_out",
+      "notes": "Online tool (need full URL)",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "BACKGROUND CHECKS": [
+    {
+      "name": "Advanced Background Checks",
+      "url": "https://www.advancedbackgroundchecks.com/removal",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Background Alert",
+      "url": "https://www.backgroundalert.com/optout/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Smart Background Checks",
+      "url": "https://www.smartbackgroundchecks.com/optout",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Cyber Background Checks",
+      "url": "https://www.cyberbackgroundchecks.com/removal",
+      "notes": "Online or email",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Checkr",
+      "url": "https://candidate.checkr.com/privacy/delete",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Background Checkers",
+      "url": "https://www.backgroundcheckers.net/optOut/name/landing",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Instant Check Mate",
+      "url": "https://www.instantcheckmate.com/privacy-center/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Looker",
+      "url": "https://www.peoplelooker.com/f/optout/search",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Finders",
+      "url": "https://www.peoplefinders.com/opt-out#IT",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Check People",
+      "url": "https://www.checkpeople.com/opt-out",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "PHONE & CALLER DIRECTORIES": [
+    {
+      "name": "Call Truth",
+      "url": "https://www.calltruth.com/opt_out.php",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Caller Smart",
+      "url": "https://www.callersmart.com/opt-out",
+      "notes": "Online or email",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Spy Dialer",
+      "url": "https://www.spydialer.com/optout.aspx",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "National Cellular Directory",
+      "url": "https://www.nationalcellulardirectory.com/optout/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "OK Caller",
+      "url": "https://www.okcaller.com/",
+      "notes": "Opt-out or Unlist in results",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "US Phonebook",
+      "url": "https://www.usphonebook.com/opt-out",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Reverse Phone Lookup",
+      "url": "https://www.intelius.com/opt-out",
+      "notes": "Intelius tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Number Guru",
+      "url": "https://www.beenverified.com/app/optout/search",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Cell Revealer",
+      "url": "https://cellrevealer.com",
+      "notes": "Click link right of entry",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "ADDRESS & LOCATION": [
+    {
+      "name": "Addresses.com",
+      "url": "https://www.intelius.com/opt-out/submit/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Address Search",
+      "url": "https://addresssearch.com/remove-info.php",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Property Shark",
+      "url": "https://www.propertyshark.com/",
+      "notes": "Email support@propertyshark.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Neighbor Report",
+      "url": "https://neighbor.report/remove",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "BlockShopper",
+      "url": "https://blockshopper.com",
+      "notes": "Email with special circumstances",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Ownerly",
+      "url": "https://www.beenverified.com/app/optout/search",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "DIRECT MARKETING & MAIL": [
+    {
+      "name": "DirectMail",
+      "url": "https://www.directmail.com/mail_preference/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "DMAchoice",
+      "url": "https://www.dmachoice.org/",
+      "notes": "Online instructions",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Catalog Choice",
+      "url": "https://catalogchoice.org",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Valpak/Cox",
+      "url": "https://www.valpak.com/coupons/show/mailinglistsuppression",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "RetailMeNot/Redplum",
+      "url": "https://www.retailmenot.com",
+      "notes": "Contact support page",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Publishers Clearing House",
+      "url": "https://pch.com",
+      "notes": "Email privacychoices@pchmail.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "GENEALOGY & FAMILY": [
+    {
+      "name": "Ancestry",
+      "url": "https://ancestry.com",
+      "notes": "Email both support addresses",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Family Tree Now",
+      "url": "https://www.familytreenow.com/optout",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "FamilySearch",
+      "url": "https://www.familysearch.org",
+      "notes": "Email DataPrivacyOfficer@ldschurch.org",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "MyHeritage",
+      "url": "http://myheritage.com",
+      "notes": "Email support@myheritage.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Archives",
+      "url": "https://archives.com/optout",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "BUSINESS & CORPORATE": [
+    {
+      "name": "Corporation Wiki",
+      "url": "https://www.corporationwiki.com/profiles/public",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Open Corporates",
+      "url": "https://opencorporates.com",
+      "notes": "Email data.protection@opencorporates.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Buzzfile",
+      "url": "http://www.buzzfile.com/Company/Remove",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "ZoomInfo",
+      "url": "https://www.zoominfo.com/about-zoominfo/privacy-manage-profile",
+      "notes": "Signup > delete details",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Sales Spider",
+      "url": "http://salespidermedia.com/opt-out-and-information-removal.php",
+      "notes": "Delete profile",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "DATA AGGREGATORS & API PROVIDERS": [
+    {
+      "name": "People Data Labs",
+      "url": "https://www.peopledatalabs.com/opt-out-form",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Pipl",
+      "url": "https://pipl.com/personal-information-removal-request",
+      "notes": "Online + email verify",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Apollo",
+      "url": "https://www.apollo.io/privacy-policy/remove/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Contact Out",
+      "url": "https://contactout.com/optout",
+      "notes": "Email or online",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Data Axle",
+      "url": "https://www.data-axle.com/do-not-sell-my-data/",
+      "notes": "Online form",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Epsilon-Main",
+      "url": "https://epsilon.com",
+      "notes": "Email optout@epsilon.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Epsilon-Abacus",
+      "url": "https://epsilon.com",
+      "notes": "Email abacusoptout@epsilon.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Epsilon-CFD",
+      "url": "https://epsilon.com",
+      "notes": "Email dataoptout1@epsilon.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Epsilon-Shopper",
+      "url": "https://epsilon.com",
+      "notes": "Email contactus@shoppers-voice.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Melissa Data",
+      "url": "https://melissadata.com",
+      "notes": "Email paul.nelson@melissa.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "DataVeria",
+      "url": "https://dataveria.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "DataChk",
+      "url": "https://www.datacheckinc.com",
+      "notes": "Email - removes subsidiaries",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "REAL ESTATE & PROPERTY": [
+    {
+      "name": "Connected Investors",
+      "url": "https://connectedinvestors.com/content/do-not-sell",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Ownerly",
+      "url": "https://www.beenverified.com/app/optout/search",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Property Shark",
+      "url": "https://www.propertyshark.com/",
+      "notes": "Email support@propertyshark.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Rehold",
+      "url": "https://rehold.com",
+      "notes": "Information Control right side",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "MUGSHOT & ARREST RECORDS": [
+    {
+      "name": "Arrest Facts",
+      "url": "https://arrestfacts.com/",
+      "notes": "Information Control on record",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "MugshotLook",
+      "url": "https://www.mugshotlook.com/optOut/name/landing",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "VEHICLE & OWNER RECORDS": [
+    {
+      "name": "Cars Owners",
+      "url": "https://carsowners.net",
+      "notes": "Email through feedback",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Fax VIN",
+      "url": "https://www.faxvin.com",
+      "notes": "Email through site",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Vehicle History",
+      "url": "https://www.vehiclehistory.com",
+      "notes": "Email support@vehiclehistory.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "INTERNATIONAL / UK": [
+    {
+      "name": "Infotracer UK",
+      "url": "https://uk.infotracer.com/",
+      "notes": "Online + email for UK",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Trace UK",
+      "url": "https://www.peopletraceuk.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "GOVERNMENT & VOTER": [
+    {
+      "name": "Voter Records",
+      "url": "https://voterrecords.com",
+      "notes": "FAQ directions",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    }
+  ],
+  "OTHER DIRECTORIES & MISC": [
+    {
+      "name": "All Area Codes",
+      "url": "https://www.allareacodes.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Anywho",
+      "url": "https://anywho.com",
+      "notes": "Select profile > Remove Listing",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "City-Data",
+      "url": "https://www.city-data.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "DexKnows",
+      "url": "https://www.dexknows.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Super Pages",
+      "url": "https://www.superpages.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Yellow Pages",
+      "url": "https://www.yellowpages.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Infospace",
+      "url": "https://infospace.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "MyLife",
+      "url": "https://www.mylife.com",
+      "notes": "Email or CA opt-out",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Spytox",
+      "url": "https://www.spytox.com",
+      "notes": "Online + email",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Sync Me",
+      "url": "https://sync.me",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "True Caller",
+      "url": "https://www.truecaller.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Zabasearch",
+      "url": "https://www.zabasearch.com",
+      "notes": "Fax to 425-974-6194",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "All People",
+      "url": "https://allpeople.com/",
+      "notes": "Edit List > Remove Listing",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "America Phonebook",
+      "url": "http://www.americaphonebook.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "BatchSkipTracing",
+      "url": "https://batchskiptracing.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "BatchLeads",
+      "url": "https://batchleads.io",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "BatchDialer",
+      "url": "https://batchdialer.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Callyo",
+      "url": "https://callyo.com",
+      "notes": "Email demanding removal",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Cented a",
+      "url": "https://centeda.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Check Secrets",
+      "url": "https://www.checksecrets.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Confidential Phone Lookup",
+      "url": "https://www.confidentialphonelookup.com",
+      "notes": "Highlight > Do Not Display",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Councilon",
+      "url": "https://councilon.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "DelvePoint",
+      "url": "https://www.delvepoint.com",
+      "notes": "Email",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Find People Search",
+      "url": "https://findpeoplesearch.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Free Background Checks",
+      "url": "https://freebackgroundcheck.us",
+      "notes": "Email privacy@infopay.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Glad I Know",
+      "url": "https://gladiknow.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "GoLookup",
+      "url": "https://golookup.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Grey Pages",
+      "url": "https://www.grey-pages.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Haines & Company",
+      "url": "https://www.haines.com",
+      "notes": "Email remove from all DBs",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "HPCC-USA",
+      "url": "https://www.hpcc-usa.org/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Infopay",
+      "url": "https://www.infopay.com/",
+      "notes": "Email privacy@infopay.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "IRBSearch",
+      "url": "https://irbsearch.com",
+      "notes": "Email customercare@irbsearch.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Locate Family",
+      "url": "https://www.locatefamily.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Mastercard",
+      "url": "https://www.mastercard.us/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Meritpages",
+      "url": "https://www.meritpages.com",
+      "notes": "Email help@meritpages.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "MugshotLook",
+      "url": "https://www.mugshotlook.com/name/landing",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "NewEnglandFacts",
+      "url": "https://newenglandfacts.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Official USA",
+      "url": "https://www.officialusa.com/p/a/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Old Friends",
+      "url": "https://old-friends.co/",
+      "notes": "Hover name > remove",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Old Phone Book",
+      "url": "http://www.oldphonebook.com/",
+      "notes": "Click removal link below results",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "PeopleBackgroundCheck",
+      "url": "https://people-background-check.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People By Name",
+      "url": "https://www.peoplebyname.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People By Phone",
+      "url": "https://www.peoplebyphone.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People-Search",
+      "url": "https://www.people-search.org",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Search 123",
+      "url": "https://www.peoplesearch123.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "People Search Expert",
+      "url": "https://www.peoplesearchexpert.com",
+      "notes": "Appears on result page",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Persopo",
+      "url": "https://www.persopo.com",
+      "notes": "Email - removes subsidiaries",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Phone Owner",
+      "url": "https://phoneowner.com",
+      "notes": "Email - removes subsidiaries",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Phonebooks",
+      "url": "https://www.phonebooks.com",
+      "notes": "Request removal link bottom right",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Plaid",
+      "url": "https://plaid.com",
+      "notes": "Online + email verify",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Private Records",
+      "url": "https://www.privaterecords.net",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Pro People Search",
+      "url": "https://propeoplesearch.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Pub360",
+      "url": "https://pub360.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Public Data USA",
+      "url": "https://publicdatausa.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Public Info Services",
+      "url": "https://www.publicinfoservices.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Public Records Search",
+      "url": "https://www.publicrecords.com/",
+      "notes": "Intelius tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Quick People Trace",
+      "url": "https://www.quickpeopletrace.com",
+      "notes": "Email remove from all DBs",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Rehold",
+      "url": "https://rehold.com",
+      "notes": "Information Control right side",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Reveal Phone Owner",
+      "url": "https://www.revealphoneowner.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Search Bug",
+      "url": "https://www.searchbug.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Search Quary",
+      "url": "https://www.searchquarry.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Selfie Systems",
+      "url": "https://www.selfie.systems",
+      "notes": "Spokeo tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Social Catfish",
+      "url": "https://socialcatfish.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "State Records",
+      "url": "https://staterecords.org/",
+      "notes": "InfoTracer tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Telephone Directories",
+      "url": "https://www.telephonedirectories.us/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Tenn Help",
+      "url": "https://www.tennhelp.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "The Real Yellow Pages",
+      "url": "https://www.yellowpages.com/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Thomson Reuters/Westlaw/CLEAR",
+      "url": "https://www.thomsonreuters.com",
+      "notes": "Email privacy.issues@thomsonreuters.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "TLO",
+      "url": "https://service.transunion.com/dss/ccpa_optout.page",
+      "notes": "Email + website (expect resistance)",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "True People Search.net",
+      "url": "https://www.truepeoplesearch.net",
+      "notes": "Email support@truepeoplesearch.net",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "UFind",
+      "url": "https://ufind.name",
+      "notes": "Email - removes subsidiaries",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "United States Phonebook",
+      "url": "https://www.unitedstatesphonebook.com",
+      "notes": "Email - removes subsidiaries",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Unmask",
+      "url": "https://unmask.com/opt-out",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "USA Official",
+      "url": "https://usa-official.com/remove.php",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "USA Trace",
+      "url": "https://www.peoplefinders.com/opt-out#IT",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Valid Number",
+      "url": "https://validnumber.com",
+      "notes": "Contact page",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Vehicle History",
+      "url": "https://www.vehiclehistory.com",
+      "notes": "Email support@vehiclehistory.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Verecor",
+      "url": "https://findrec.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Vericora",
+      "url": "https://vericora.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Veriforia",
+      "url": "https://veriforia.com",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Veripages",
+      "url": "https://veripages.com",
+      "notes": "Email or Control Profile",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Visa",
+      "url": "https://marketingreportoptout.visa.com/OPTOUT/request.do",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "White Pages",
+      "url": "http://www.whitepages.com/suppression_requests",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Whooster",
+      "url": "https://whooster.com",
+      "notes": "Email privacy@whooster.com",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Whoseno",
+      "url": "https://whoseno.com",
+      "notes": "Email through site",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "WYTY",
+      "url": "https://www.wyty.com/remove/",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Yasni",
+      "url": "https://yasni.com",
+      "notes": "No removal - identify sources only",
+      "dedicated_removal": false,
+      "submitted": false,
+      "verified": false
+    },
+    {
+      "name": "Yellow Book",
+      "url": "https://www.beenverified.com/app/optout/search",
+      "notes": "Online tool",
+      "dedicated_removal": true,
+      "submitted": false,
+      "verified": false
+    }
+  ]
+}
