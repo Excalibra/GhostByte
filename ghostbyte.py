@@ -6,6 +6,7 @@ Personal Data Removal Tool
 
 import json
 import os
+import re
 import webbrowser
 import tkinter as tk
 from PIL import Image, ImageTk
@@ -13,6 +14,13 @@ from tkinter import font as tkfont
 
 DATA_FILE = "data/privacy_progress.json"
 SOURCES_FILE = "data/sources.json"
+
+# Column widths for the service table (shared by rendering and window sizing)
+NAME_W = 22
+LINK_W = 26
+NOTES_W = 40
+SUB_W = 5
+VER_W = 5
 
 YOUR_DATA = {
     "full_name": "YOUR FULL NAME HERE",
@@ -66,29 +74,22 @@ class MatrixCRTApp:
         self.show_intro()
 
     def adjust_window_size(self):
-        """Set window width to fit the table, capped by screen size."""
-        NAME_W = 28
-        LINK_W = 32
-        NOTES_W = 50
-        NUM_W = 4
-        SUB_W = 5
-        VER_W = 5
-
+        """Set window width to fit the table, capped to a compact size."""
         dummy_row = (f"│ {'#':>2} │ {'Service Name':<{NAME_W}} │ {'Link':<{LINK_W}} │ "
                      f"{'Notes':<{NOTES_W}} │ {'Sub':^{SUB_W}} │ {'Ver':^{VER_W}} │")
         inner_chars = len(dummy_row) - 2
 
         char_width_px = self.custom_font.measure("A")
         table_width_px = int(inner_chars * char_width_px) + 100
-      
+
         screen_width = self.root.winfo_screenwidth()
         screen_height = self.root.winfo_screenheight()
 
-        target_width = min(table_width_px, int(screen_width * 0.95))
-        target_height = int(screen_height * 0.85)
+        target_width = min(table_width_px, int(screen_width * 0.8))
+        target_height = min(int(screen_height * 0.7), 760)
 
         self.root.geometry(f"{target_width}x{target_height}")
-        self.root.minsize(900, 600)
+        self.root.minsize(700, 450)
 
     # ---------- DATA HANDLING ----------
     def load_progress(self):
@@ -147,8 +148,10 @@ class MatrixCRTApp:
 
         self.output_text = tk.Text(self.main_frame, wrap="none", bg="#0c0c0c", fg="#7fff7f",
                                    insertbackground="#7fff7f", font=self.custom_font,
-                                   relief="flat", borderwidth=0, highlightthickness=0)
+                                   relief="flat", borderwidth=0, highlightthickness=0,
+                                   takefocus=0, cursor="arrow")
         self.output_text.pack(side="left", fill="both", expand=True)
+        self.output_text.bind("<Button-1>", self.on_output_click)
 
         self.output_text.tag_configure("bright", foreground="#7fff7f")
         self.output_text.tag_configure("dim", foreground="#555555")
@@ -200,6 +203,7 @@ class MatrixCRTApp:
         self.input_entry.pack(side="left", fill="x", expand=True, padx=(5,0))
         self.input_entry.bind("<Return>", self.process_command)
         self.input_entry.focus_set()
+        self.root.bind("<FocusIn>", lambda e: self.input_entry.focus_set())
 
         self.blink_cursor()
 
@@ -240,6 +244,21 @@ class MatrixCRTApp:
         self.output_text.config(state="normal")
         self.output_text.delete(1.0, "end")
         self.output_text.config(state="disabled")
+
+    def on_output_click(self, event):
+        self.input_entry.focus_set()
+        index = self.output_text.index(f"@{event.x},{event.y}")
+        line = self.output_text.get(f"{index} linestart", f"{index} lineend")
+        match = re.match(r"\s*│\s*(\d+)\s*│", line)
+        if match:
+            num = int(match.group(1))
+            if self.current_view == "categories":
+                self.append_output(f"> {num}\n")
+                self.select_category(num - 1)
+            elif self.current_view == "services":
+                self.append_output(f"> {num}\n")
+                self.toggle_submitted(num - 1)
+        return "break"
 
     def process_command(self, event=None):
         cmd = self.input_entry.get().strip()
@@ -321,7 +340,7 @@ class MatrixCRTApp:
             self.append_output(row + "\n")
 
         self.append_output("└" + "─" * INNER_WIDTH + "┘\n")
-        self.append_output("\nEnter a number to select a category.\n")
+        self.append_output("\nEnter a number (or click a row) to select a category.\n")
         self.append_output("Commands: m=Menu, a=All, q=Quit\n")
         self.current_view = "categories"
 
@@ -340,12 +359,6 @@ class MatrixCRTApp:
 
     def show_services(self, cat_name, services):
         self.clear_output()
-        NAME_W = 24
-        LINK_W = 28
-        NOTES_W = 50
-        NUM_W = 4
-        SUB_W = 5
-        VER_W = 5
 
         dummy_row = (f"│ {'#':>2} │ {'Service Name':<{NAME_W}} │ {'Link':<{LINK_W}} │ "
                      f"{'Notes':<{NOTES_W}} │ {'Sub':^{SUB_W}} │ {'Ver':^{VER_W}} │")
@@ -387,7 +400,7 @@ class MatrixCRTApp:
 
         self.output_text.config(state="disabled")
         self.append_output(f"└{'─' * INNER_WIDTH}┘\n")
-        self.append_output("\nEnter a number to toggle SUBMITTED.\n")
+        self.append_output("\nEnter a number (or click a row) to toggle SUBMITTED.\n")
         self.append_output("Type 'v <number>' to toggle VERIFIED.\n")
         self.append_output("Type 'o <number>' to open the URL.\n")
         self.append_output("Commands: b=Back, q=Quit\n")
