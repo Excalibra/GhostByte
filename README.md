@@ -2,7 +2,7 @@
   
 # Ghostbyte
 
-  <img width="400" alt="ghostbyte" src="https://github.com/user-attachments/assets/a3e09134-17f6-464a-a8d3-b37567345423" />
+  <img width="100" alt="ghostbyte" src="https://github.com/user-attachments/assets/a3e09134-17f6-464a-a8d3-b37567345423" />
 
 **Personal Data Removal Tool**  
 
