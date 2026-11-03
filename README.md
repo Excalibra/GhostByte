@@ -42,7 +42,7 @@ This hybrid model—guided, systematic, but ultimately human‑controlled—repr
 - Beautiful green-on-black CRT interface with real scanlines
 - Live progress tracking (submitted / verified / % purged)
 - Non-removal URLs automatically dimmed grey so you know when you’re dealing with email-only bullshit
-- One-key commands: numbers to toggle, `o <num>` to open link, `v <num>` to verify
+- One-click buttons: toggle, open link, verify — no typing commands
 - Auto-saves your progress forever
 - Loads fresh sources from `data/sources.json` on every run
 
@@ -69,17 +69,15 @@ ghostbyte/
 └── .gitignore
 ```
 
-### Commands (inside the GUI)
+### Controls (inside the GUI)
 
-- `1-9` → select category  
-- number → toggle **SUBMITTED**  
-- click a row → same as typing its number  
-- `v <number>` → toggle **VERIFIED**  
-- `o <number>` → open the removal URL  
-- `m` → menu  
-- `a` → show ALL remaining services  
-- `b` → back  
-- `q` → quit and save
+- click a row → select category / toggle **SUBMITTED**  
+- `OPEN LINK` button → open the removal URL of the last clicked row  
+- `VERIFY` button → toggle **VERIFIED** on the last clicked row  
+- `BACK` button → back to the menu  
+- `ALL REMAINING` button → show ALL remaining services  
+- `MENU` button → back to the category menu  
+- `QUIT` button → quit and save
 
 ### Pro Tip
 
