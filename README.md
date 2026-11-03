@@ -6,7 +6,6 @@
 
 **Personal Data Removal Tool**  
 
-Congratulations you paranoid fuck.  
 You’re tired of being Google-able.  
 Good. Time to disappear.
 
